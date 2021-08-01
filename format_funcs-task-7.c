@@ -17,19 +17,25 @@ int print_S(va_list *list)
 	while (str[i])
 	{
 		c = str[i];
+
 		if ((c > 0 && c < 32) || c >= 127)
 		{
 			count += _putchar('\\');
 			count += _putchar('x');
-			count += _putchar('0');
+			
+			if (c <= 15)
+				count += _putchar('0');
+
 			count += _printf("%X", (unsigned int) c);
 		}
 		else
 		{
 			count += _putchar(c);
 		}
+
 		i++;
 	}
+
 	return (count);
 }
 
