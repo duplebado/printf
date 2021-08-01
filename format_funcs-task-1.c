@@ -20,7 +20,6 @@ if (n < 0)
 }
 
 for (i = 0; n / divisor > 9; i++, divisor *= 10)
-;
 
 for (; divisor >= 1; n %= divisor, divisor /= 10, charPrinted++)
 {
@@ -41,7 +40,6 @@ int divisor = 1, i, resp;
 unsigned int n = va_arg(*arg, unsigned int);
 
 for (i = 0; n / divisor > 9; i++, divisor *= 10)
-;
 
 for (; divisor >= 1; n %= divisor, divisor /= 10)
 {
